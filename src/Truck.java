@@ -1,15 +1,11 @@
-public class Truck extends Transport {
+public class Truck extends Transport implements WheelsInterface, EngineInterface {
     public Truck(String modelName, int wheelCount) {
         super(modelName, wheelCount);
     }
 
-    @Override
-    public void checkEngine() {
-        System.out.println("Проверяем двигатель");
-    }
-
-    @Override
-    public void checkTrailer() {
+    public void check() {
+        this.updateTyre();
+        this.checkEngine();
         System.out.println("Проверяем прицеп");
     }
 }
