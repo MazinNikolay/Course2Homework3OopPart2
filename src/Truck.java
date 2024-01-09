@@ -1,4 +1,4 @@
-public class Truck extends Transport implements WheelsInterface, EngineInterface {
+public class Truck extends Transport implements EngineInterface {
     public Truck(String modelName, int wheelCount) {
         super(modelName, wheelCount);
     }
