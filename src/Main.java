@@ -1,17 +1,16 @@
 public class Main {
     public static void main(String[] args) {
-        Transport car = new Car("car1", 4);
-        Transport car2 = new Car("car2", 4);
-        Transport truck = new Truck("truck1", 6);
-        Transport truck2 = new Truck("truck1", 8);
-        Transport bicycle = new Bicykle("bicycle1", 2);
-        Transport bicycle2 = new Bicykle("bicycle2", 2);
+        Transport[] transports = {
+                new Car("car1", 4),
+                new Car("car2", 4),
+                new Truck("truck1", 6),
+                new Truck("truck1", 8),
+                new Bicykle("bicycle1", 2),
+                new Bicykle("bicycle2", 2)
+        };
         ServiceStation station = new ServiceStation();
-        station.check(car, null, null);
-        station.check(car2, null, null);
-        station.check(null, bicycle, null);
-        station.check(null, bicycle2, null);
-        station.check(null, null, truck);
-        station.check(null, null, truck2);
+        for (Transport transportIterator : transports) {
+            station.check(transportIterator);
+        }
     }
 }
