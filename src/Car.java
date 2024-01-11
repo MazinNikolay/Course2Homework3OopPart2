@@ -1,10 +1,5 @@
-public class Car extends Transport implements EngineInterface {
+public class Car extends EnginedTransport {
     public Car(String modelName, int wheelCount) {
         super(modelName, wheelCount);
-    }
-
-    public void check() {
-        this.updateTyre();
-        this.checkEngine();
     }
 }

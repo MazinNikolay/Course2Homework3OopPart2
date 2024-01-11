@@ -1,9 +1,5 @@
-public class Bicykle extends Transport {
+public class Bicykle extends WheelledTransport {
     public Bicykle(String modelName, int wheelCount) {
         super(modelName, wheelCount);
-    }
-
-    public void check() {
-        this.updateTyre();
     }
 }
